@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   data() {
@@ -26,16 +26,20 @@ export default {
   },
   methods: {
     channelClick(channeName) {
-      this.$store.dispatch('getContent', {
+      this.getContent({
         channel: channeName
       });
 
       this.curChannel = channeName
-    }
+    },
+
+    ...mapActions(['getContent'])
   },
-  computed: mapGetters({
-    channels: 'channels'
-  })
+  computed: {
+    ...mapGetters({
+      channels: 'channels'
+    })
+  }
 }
 
 </script>
@@ -47,5 +51,4 @@ export default {
   font-size: 14px;
   font-weight: bold;
 }
-
 </style>
