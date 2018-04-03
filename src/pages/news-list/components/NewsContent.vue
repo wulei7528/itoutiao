@@ -3,7 +3,7 @@
     <el-row :gutter="20">
       <el-col :lg="8" :md="12" :sm="24" :xs="24" v-for="(item, index) in content" :key="String(index)">
         <dl @click="contentClick(item)">
-          <dt><img :src="item.pic || require('../assets/common.jpg')"></dt>
+          <dt><img :src="item.pic || require('@/assets/common.jpg')"></dt>
           <dd>
             <h4>{{item.title}}</h4>
             <h5 class="help-inline">

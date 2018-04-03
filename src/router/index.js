@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomePage from '@/pages/HomePage'
+import { NewsList } from '@/pages/news-list'
 
 Vue.use(Router)
 
@@ -8,7 +8,6 @@ export default new Router({
   mode: 'history',
   routes: [{
     path: '/',
-    name: 'HomePage',
-    component: HomePage
+    component: NewsList
   }]
 })

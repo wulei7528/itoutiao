@@ -1,12 +1,19 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <app-layout>
+    <div slot="content-view">
+      <router-view/>
+    </div>
+  </app-layout>
 </template>
 
 <script>
+import { AppLayout } from '@/plugins/components/layout'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    AppLayout
+  }
 }
 </script>
 

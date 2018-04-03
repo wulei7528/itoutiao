@@ -1,16 +1,13 @@
 <template>
-  <div class="homepage">
-    <news-nav></news-nav>
+  <div>
     <news-content></news-content>
   </div>
 </template>
 <script>
-import NewsNav from '../components/NewsNav'
-import NewsContent from '../components/NewsContent'
+import NewsContent from './components/NewsContent'
 
 export default {
   components: {
-    NewsNav,
     NewsContent
   },
   created() {
