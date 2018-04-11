@@ -1,25 +1,15 @@
 <template>
   <div>
-    <news-content></news-content>
+    <news-list-items></news-list-items>
   </div>
 </template>
+
 <script>
-import NewsContent from './components/NewsContent'
-import { mapActions } from 'vuex'
+import NewsListItems from './components/NewsListItems'
 
 export default {
   components: {
-    NewsContent
-  },
-  created() {
-    this.getChannels()
-    this.getContent({
-      channel: '头条'
-    })
-  },
-  methods: {
-    ...mapActions(['getChannels', 'getContent'])  // map this.getChannels() to this.$store.dispatch('getChannels')
+    NewsListItems
   }
-}
-
+};
 </script>

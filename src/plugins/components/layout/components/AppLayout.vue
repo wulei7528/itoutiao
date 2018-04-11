@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import AppHeader from "./AppHeader";
+import AppHeader from './AppHeader'
 
 export default {
   data() {

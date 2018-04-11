@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import channels from './modules/channels'
-import content from './modules/content'
+import newsList from './news-list'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
     channels,
-    content
+    newsList
   }
 })

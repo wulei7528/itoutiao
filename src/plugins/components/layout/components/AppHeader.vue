@@ -20,28 +20,30 @@ export default {
         index: '9999',
         path: '/'
       },
-
       curChannel: '头条'
-    }
+    };
+  },
+  created() {
+    this.getChannels()
   },
   methods: {
     channelClick(channeName) {
-      this.getContent({
+      this.getList({
         channel: channeName
-      });
+      })
 
       this.curChannel = channeName
     },
 
-    ...mapActions(['getContent'])
+    ...mapActions(['getChannels']), 
+    ...mapActions('newsList', ['getList'])
   },
   computed: {
     ...mapGetters({
       channels: 'channels'
     })
   }
-}
-
+};
 </script>
 <style>
 .news-nav-location {
